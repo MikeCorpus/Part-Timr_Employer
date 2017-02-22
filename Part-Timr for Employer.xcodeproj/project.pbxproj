@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2708B2DA1E4F384200904799 /* EmployerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708B2D91E4F384200904799 /* EmployerVC.swift */; };
+		271F90301E41A90200DDC618 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 271F902F1E41A90200DDC618 /* GoogleService-Info.plist */; };
+		273925C51E45C7890050AF65 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273925C41E45C7890050AF65 /* AuthProvider.swift */; };
+		275EC51A1E55CE49003928CF /* DBProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EC5191E55CE49003928CF /* DBProvider.swift */; };
+		275EC51C1E55CF55003928CF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EC51B1E55CF55003928CF /* Constants.swift */; };
+		278078761E40298600BB2D24 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278078751E40298600BB2D24 /* SignInVC.swift */; };
+		27858FCD1E3F687A0034A169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27858FCC1E3F687A0034A169 /* AppDelegate.swift */; };
+		27858FD21E3F687A0034A169 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27858FD01E3F687A0034A169 /* Main.storyboard */; };
+		27858FD51E3F687A0034A169 /* Part_Timr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27858FD31E3F687A0034A169 /* Part_Timr.xcdatamodeld */; };
+		27858FD71E3F687A0034A169 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27858FD61E3F687A0034A169 /* Assets.xcassets */; };
+		27858FDA1E3F687A0034A169 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27858FD81E3F687A0034A169 /* LaunchScreen.storyboard */; };
+		8696392424A7F37736249DB8 /* Pods_Part_Timr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B40486AE37BA5DCC926C0F5F /* Pods_Part_Timr.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2708B2D91E4F384200904799 /* EmployerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployerVC.swift; sourceTree = "<group>"; };
+		271F902F1E41A90200DDC618 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		273925C41E45C7890050AF65 /* AuthProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
+		275EC5191E55CE49003928CF /* DBProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBProvider.swift; sourceTree = "<group>"; };
+		275EC51B1E55CF55003928CF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		278078751E40298600BB2D24 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		27858FC91E3F687A0034A169 /* Part-Timr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Part-Timr.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27858FCC1E3F687A0034A169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		27858FD11E3F687A0034A169 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27858FD41E3F687A0034A169 /* Part_Timr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Part_Timr.xcdatamodel; sourceTree = "<group>"; };
+		27858FD61E3F687A0034A169 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27858FD91E3F687A0034A169 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		27858FDB1E3F687A0034A169 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FFA496C94B2241E656DEA90 /* Pods-Part-Timr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Part-Timr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Part-Timr/Pods-Part-Timr.release.xcconfig"; sourceTree = "<group>"; };
+		52BAAE8EFFFB2B746D2D66B8 /* Pods-Part-Timr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Part-Timr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Part-Timr/Pods-Part-Timr.debug.xcconfig"; sourceTree = "<group>"; };
+		B40486AE37BA5DCC926C0F5F /* Pods_Part_Timr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Part_Timr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27858FC61E3F687A0034A169 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8696392424A7F37736249DB8 /* Pods_Part_Timr.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06DDD9EABA3F43BDCEA0F4F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52BAAE8EFFFB2B746D2D66B8 /* Pods-Part-Timr.debug.xcconfig */,
+				4FFA496C94B2241E656DEA90 /* Pods-Part-Timr.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		273925C31E45C7620050AF65 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				273925C41E45C7890050AF65 /* AuthProvider.swift */,
+				275EC5191E55CE49003928CF /* DBProvider.swift */,
+				275EC51B1E55CF55003928CF /* Constants.swift */,
+			);
+			name = Plugins;
+			sourceTree = "<group>";
+		};
+		278078721E40291500BB2D24 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		278078731E40291C00BB2D24 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		278078741E40292200BB2D24 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				278078751E40298600BB2D24 /* SignInVC.swift */,
+				2708B2D91E4F384200904799 /* EmployerVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		27858FC01E3F687A0034A169 = {
+			isa = PBXGroup;
+			children = (
+				27858FCB1E3F687A0034A169 /* Part-Timr */,
+				27858FCA1E3F687A0034A169 /* Products */,
+				06DDD9EABA3F43BDCEA0F4F6 /* Pods */,
+				936B37094CA66F69AF51F505 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		27858FCA1E3F687A0034A169 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27858FC91E3F687A0034A169 /* Part-Timr.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27858FCB1E3F687A0034A169 /* Part-Timr */ = {
+			isa = PBXGroup;
+			children = (
+				273925C31E45C7620050AF65 /* Plugins */,
+				278078721E40291500BB2D24 /* Model */,
+				278078731E40291C00BB2D24 /* View */,
+				278078741E40292200BB2D24 /* Controller */,
+				27858FD01E3F687A0034A169 /* Main.storyboard */,
+				27858FCC1E3F687A0034A169 /* AppDelegate.swift */,
+				27858FD61E3F687A0034A169 /* Assets.xcassets */,
+				27858FD81E3F687A0034A169 /* LaunchScreen.storyboard */,
+				27858FDB1E3F687A0034A169 /* Info.plist */,
+				27858FD31E3F687A0034A169 /* Part_Timr.xcdatamodeld */,
+				271F902F1E41A90200DDC618 /* GoogleService-Info.plist */,
+			);
+			path = "Part-Timr";
+			sourceTree = "<group>";
+		};
+		936B37094CA66F69AF51F505 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B40486AE37BA5DCC926C0F5F /* Pods_Part_Timr.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27858FC81E3F687A0034A169 /* Part-Timr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27858FDE1E3F687A0034A169 /* Build configuration list for PBXNativeTarget "Part-Timr" */;
+			buildPhases = (
+				7B20C3D8B733FE36116A779D /* [CP] Check Pods Manifest.lock */,
+				27858FC51E3F687A0034A169 /* Sources */,
+				27858FC61E3F687A0034A169 /* Frameworks */,
+				27858FC71E3F687A0034A169 /* Resources */,
+				AA361BB64881B3667D786B5C /* [CP] Embed Pods Frameworks */,
+				80F90A77BCF11892F35177B1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Part-Timr";
+			productName = "Part-Timr";
+			productReference = 27858FC91E3F687A0034A169 /* Part-Timr.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27858FC11E3F687A0034A169 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Michael V. Corpus";
+				TargetAttributes = {
+					27858FC81E3F687A0034A169 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = RQQ2265X45;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 27858FC41E3F687A0034A169 /* Build configuration list for PBXProject "Part-Timr for Employer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27858FC01E3F687A0034A169;
+			productRefGroup = 27858FCA1E3F687A0034A169 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27858FC81E3F687A0034A169 /* Part-Timr */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27858FC71E3F687A0034A169 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27858FDA1E3F687A0034A169 /* LaunchScreen.storyboard in Resources */,
+				271F90301E41A90200DDC618 /* GoogleService-Info.plist in Resources */,
+				27858FD71E3F687A0034A169 /* Assets.xcassets in Resources */,
+				27858FD21E3F687A0034A169 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B20C3D8B733FE36116A779D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		80F90A77BCF11892F35177B1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Part-Timr/Pods-Part-Timr-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA361BB64881B3667D786B5C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Part-Timr/Pods-Part-Timr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27858FC51E3F687A0034A169 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27858FD51E3F687A0034A169 /* Part_Timr.xcdatamodeld in Sources */,
+				27858FCD1E3F687A0034A169 /* AppDelegate.swift in Sources */,
+				273925C51E45C7890050AF65 /* AuthProvider.swift in Sources */,
+				278078761E40298600BB2D24 /* SignInVC.swift in Sources */,
+				275EC51C1E55CF55003928CF /* Constants.swift in Sources */,
+				275EC51A1E55CE49003928CF /* DBProvider.swift in Sources */,
+				2708B2DA1E4F384200904799 /* EmployerVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		27858FD01E3F687A0034A169 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27858FD11E3F687A0034A169 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		27858FD81E3F687A0034A169 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27858FD91E3F687A0034A169 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27858FDC1E3F687A0034A169 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		27858FDD1E3F687A0034A169 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27858FDF1E3F687A0034A169 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52BAAE8EFFFB2B746D2D66B8 /* Pods-Part-Timr.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = RQQ2265X45;
+				INFOPLIST_FILE = "Part-Timr/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mikeroscoop.Part-Timr";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		27858FE01E3F687A0034A169 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FFA496C94B2241E656DEA90 /* Pods-Part-Timr.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = RQQ2265X45;
+				INFOPLIST_FILE = "Part-Timr/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mikeroscoop.Part-Timr";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27858FC41E3F687A0034A169 /* Build configuration list for PBXProject "Part-Timr for Employer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27858FDC1E3F687A0034A169 /* Debug */,
+				27858FDD1E3F687A0034A169 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27858FDE1E3F687A0034A169 /* Build configuration list for PBXNativeTarget "Part-Timr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27858FDF1E3F687A0034A169 /* Debug */,
+				27858FE01E3F687A0034A169 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		27858FD31E3F687A0034A169 /* Part_Timr.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				27858FD41E3F687A0034A169 /* Part_Timr.xcdatamodel */,
+			);
+			currentVersion = 27858FD41E3F687A0034A169 /* Part_Timr.xcdatamodel */;
+			path = Part_Timr.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 27858FC11E3F687A0034A169 /* Project object */;
+}
