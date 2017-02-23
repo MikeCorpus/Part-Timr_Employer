@@ -62,8 +62,8 @@ class SignInVC: UIViewController {
                     self.alertTheUser(title: "Problem With Creating A New User", message: message!)
                 } else {
                     print("CREATING A NEW USER COMPLETE")
-                    
-                    self.alertTheUser(title: "Signing In Complete", message: "Creating the user successful")
+                    self.performSegue(withIdentifier: self.EMPLOYER_SEGUE, sender: nil)
+                    //self.alertTheUser(title: "Signing In Complete", message: "Creating the user successful")
                     
                 }
                 
