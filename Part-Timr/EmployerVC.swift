@@ -13,6 +13,9 @@ class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
 
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBAction func Hire(_ sender: Any) {
+    }
+    
     @IBAction func logOut(_ sender: Any) {
         
         if AuthProvider.Instance.logOut() {

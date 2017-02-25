@@ -52,7 +52,6 @@
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g1j-vY-E5u"/>
-                                            <segue destination="msM-IR-ebA" kind="show" identifier="EmployerVC" id="uPO-0R-Fp7"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaJ-Wy-wJK">
@@ -92,6 +91,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="ypj-MC-KHg" id="Y9v-g9-Tcl"/>
                         <outlet property="passwordTextField" destination="sex-Tc-pi1" id="kke-h6-n2V"/>
+                        <segue destination="msM-IR-ebA" kind="show" identifier="EmployerVC" id="XxM-7q-nNR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -131,6 +131,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4WX-qh-mzr">
                                 <rect key="frame" x="144" y="370" width="33" height="30"/>
                                 <state key="normal" title="Hire!"/>
+                                <connections>
+                                    <action selector="Hire:" destination="msM-IR-ebA" eventType="touchUpInside" id="7Cp-uK-5SW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -33,15 +33,18 @@ class SignInVC: UIViewController {
                     
                 } else {
                    
+                    print("LOGIN SUCCESSFUL")
                     
                     self.performSegue(withIdentifier: self.EMPLOYER_SEGUE, sender: nil)
-                     print("LOGIN SUCCESSFUL")
+                    
                 }
             
             })
             
         } else {
-            alertTheUser(title: "Email and Password are required", message: "Please enter email and password");
+            let alertTheUser = UIAlertController(title: "Error", message: "Username and Password cannot be left empty.", preferredStyle: .alert)
+            alertTheUser.addAction(UIAlertAction(title: "OK", style:. default, handler: nil))
+            present(alertTheUser, animated:true, completion: nil)
         }
     }
     
@@ -70,7 +73,9 @@ class SignInVC: UIViewController {
             })
             
         } else {
-             alertTheUser(title: "Email and Password are required", message: "Please enter email and password");
+            let alertTheUser = UIAlertController(title: "Error", message: "Username and Password cannot be left empty.", preferredStyle: .alert)
+            alertTheUser.addAction(UIAlertAction(title: "OK", style:. default, handler: nil))
+            present(alertTheUser, animated:true, completion: nil)
         }
         
     }
