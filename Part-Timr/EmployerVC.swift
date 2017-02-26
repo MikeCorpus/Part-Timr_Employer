@@ -13,6 +13,43 @@ class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
 
     @IBOutlet weak var mapView: MKMapView!
     
+    private var locationManager = CLLocationManager()
+    private var userLocation: CLLocationCoordinate2D?
+//    private var hirerLocation: CLLocationCoordinate2D?
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initializeLocationManager()
+    }
+    
+    private func initializeLocationManager() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if let location = locationManager.location?.coordinate {
+            
+            userLocation = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+            
+            let region = MKCoordinateRegion(center: userLocation!, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+            
+            mapView.setRegion(region, animated: true)
+            mapView.removeAnnotations(mapView.annotations)
+            
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = userLocation!
+            annotation.title = "Hirer's Location"
+            mapView.addAnnotation(annotation)
+            
+        }
+        
+    }
+    
     @IBAction func Hire(_ sender: Any) {
     }
     
@@ -29,11 +66,7 @@ class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
         
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    
 
     
     func alertTheUser(title: String, message: String)  {
