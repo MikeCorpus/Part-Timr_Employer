@@ -18,6 +18,7 @@
 		27858FD51E3F687A0034A169 /* Part_Timr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27858FD31E3F687A0034A169 /* Part_Timr.xcdatamodeld */; };
 		27858FD71E3F687A0034A169 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27858FD61E3F687A0034A169 /* Assets.xcassets */; };
 		27858FDA1E3F687A0034A169 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27858FD81E3F687A0034A169 /* LaunchScreen.storyboard */; };
+		2792FCCF1E658EA00091FD88 /* HireHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792FCCE1E658EA00091FD88 /* HireHandler.swift */; };
 		8696392424A7F37736249DB8 /* Pods_Part_Timr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B40486AE37BA5DCC926C0F5F /* Pods_Part_Timr.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		27858FD61E3F687A0034A169 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27858FD91E3F687A0034A169 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27858FDB1E3F687A0034A169 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2792FCCE1E658EA00091FD88 /* HireHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HireHandler.swift; sourceTree = "<group>"; };
 		4FFA496C94B2241E656DEA90 /* Pods-Part-Timr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Part-Timr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Part-Timr/Pods-Part-Timr.release.xcconfig"; sourceTree = "<group>"; };
 		52BAAE8EFFFB2B746D2D66B8 /* Pods-Part-Timr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Part-Timr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Part-Timr/Pods-Part-Timr.debug.xcconfig"; sourceTree = "<group>"; };
 		B40486AE37BA5DCC926C0F5F /* Pods_Part_Timr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Part_Timr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,7 @@
 				273925C41E45C7890050AF65 /* AuthProvider.swift */,
 				275EC5191E55CE49003928CF /* DBProvider.swift */,
 				275EC51B1E55CF55003928CF /* Constants.swift */,
+				2792FCCE1E658EA00091FD88 /* HireHandler.swift */,
 			);
 			name = Plugins;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			files = (
 				27858FD51E3F687A0034A169 /* Part_Timr.xcdatamodeld in Sources */,
 				27858FCD1E3F687A0034A169 /* AppDelegate.swift in Sources */,
+				2792FCCF1E658EA00091FD88 /* HireHandler.swift in Sources */,
 				273925C51E45C7890050AF65 /* AuthProvider.swift in Sources */,
 				278078761E40298600BB2D24 /* SignInVC.swift in Sources */,
 				275EC51C1E55CF55003928CF /* Constants.swift in Sources */,

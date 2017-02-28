@@ -32,10 +32,13 @@ class SignInVC: UIViewController {
                     self.alertTheUser(title: "Authentication Error", message: message!)
                     
                 } else {
-                   
-                    print("LOGIN SUCCESSFUL")
+                    
+                    HireHandler.Instance.employer = self.emailTextField.text!
+                    
+                    self.passwordTextField.text = ""; //clears the password field
                     
                     self.performSegue(withIdentifier: self.EMPLOYER_SEGUE, sender: nil)
+                    print("LOGIN SUCCESSFUL")
                     
                 }
             

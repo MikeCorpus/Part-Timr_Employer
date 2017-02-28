@@ -51,6 +51,7 @@ class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
     }
     
     @IBAction func Hire(_ sender: Any) {
+        HireHandler.Instance.requestParttimr(latitude: Double (userLocation!.latitude), longitude: Double (userLocation!.longitude))
     }
     
     @IBAction func logOut(_ sender: Any) {
