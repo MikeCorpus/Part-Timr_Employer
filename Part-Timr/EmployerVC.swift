@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, HirerController {
 
     @IBOutlet weak var mapView: MKMapView!
     
@@ -17,10 +17,15 @@ class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
     private var userLocation: CLLocationCoordinate2D?
 //    private var hirerLocation: CLLocationCoordinate2D?
     
+    private var canCallEmployee = true
+    private var employerCanceledRequest = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeLocationManager()
+        HireHandler.Instance.observeMessagesForEmployer()
+        HireHandler.Instance.delegate = self
+        
     }
     
     private func initializeLocationManager() {
@@ -50,8 +55,21 @@ class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
         
     }
     
+    func canCallParttimr(delegateCalled: Bool) {
+        if delegateCalled {
+             
+        }
+    }
+    
     @IBAction func Hire(_ sender: Any) {
-        HireHandler.Instance.requestParttimr(latitude: Double (userLocation!.latitude), longitude: Double (userLocation!.longitude))
+        if userLocation != nil {
+            if canCallEmployee {
+                HireHandler.Instance.requestParttimr(latitude: Double (userLocation!.latitude), longitude: Double (userLocation!.longitude))
+            } else {
+                employerCanceledRequest = true
+                // cancel parttimr
+            }
+        }
     }
     
     @IBAction func logOut(_ sender: Any) {
@@ -79,3 +97,21 @@ class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
    
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
