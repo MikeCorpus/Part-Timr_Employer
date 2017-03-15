@@ -128,8 +128,8 @@
                                     <constraint firstAttribute="width" secondItem="ykm-fi-Mdb" secondAttribute="height" multiplier="320:261" id="izY-KI-6fX"/>
                                 </constraints>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4WX-qh-mzr">
-                                <rect key="frame" x="144" y="370" width="33" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4WX-qh-mzr">
+                                <rect key="frame" x="116" y="368" width="89" height="30"/>
                                 <state key="normal" title="Hire!"/>
                                 <connections>
                                     <action selector="Hire:" destination="msM-IR-ebA" eventType="touchUpInside" id="7Cp-uK-5SW"/>
@@ -149,6 +149,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="callParttimrBtn" destination="4WX-qh-mzr" id="mqv-fV-fyA"/>
                         <outlet property="mapView" destination="ykm-fi-Mdb" id="2po-5H-ut7"/>
                     </connections>
                 </viewController>

@@ -9,18 +9,24 @@
 import UIKit
 import MapKit
 
-class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, ParttimrController {
 
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var callParttimrBtn: UIButton!
     private var locationManager = CLLocationManager()
     private var userLocation: CLLocationCoordinate2D?
 //    private var hirerLocation: CLLocationCoordinate2D?
+    
+    private var canCallParttimr = true
+    private var employerCanceledRequest = false
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeLocationManager()
+        HireHandler.Instance.observeMessagesForEmployer()
+        HireHandler.Instance.delegate = self
     }
     
     private func initializeLocationManager() {
@@ -49,9 +55,26 @@ class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
         }
         
     }
+
+    func canCallParttimr(delegateCalled: Bool) {
+        if delegateCalled {
+            callParttimrBtn.setTitle("Cancel", for: UIControlState.normal)
+            canCallParttimr = false
+        } else {
+            callParttimrBtn.setTitle("Hire!", for: UIControlState.normal)
+            canCallParttimr = true
+        }
+    }
     
     @IBAction func Hire(_ sender: Any) {
-        HireHandler.Instance.requestParttimr(latitude: Double (userLocation!.latitude), longitude: Double (userLocation!.longitude))
+        if userLocation != nil {
+            if canCallParttimr {
+                HireHandler.Instance.requestParttimr(latitude: Double (userLocation!.latitude), longitude: Double (userLocation!.longitude))
+            } else {
+                employerCanceledRequest = true
+                HireHandler.Instance.cancelParttimr()
+            }
+        }
     }
     
     @IBAction func logOut(_ sender: Any) {
