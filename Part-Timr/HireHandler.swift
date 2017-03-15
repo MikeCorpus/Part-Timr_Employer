@@ -9,15 +9,9 @@
 import Foundation
 import FirebaseDatabase
 
-protocol HirerController: class {
-    func canCallParttimr(delegateCalled: Bool)
-}
-
 class HireHandler {
     
     private static let _instance = HireHandler()
-    
-    weak var delegate: HirerController?
     
     var employer = ""
     var employee = ""
@@ -27,21 +21,6 @@ class HireHandler {
         return _instance
     }
     
-    func observeMessagesForEmployer() {
-        
-        DBProvider.Instance.requestRef.observe(FIRDataEventType.childAdded) { (snapshot: FIRDataSnapshot) in
-            
-            if let data = snapshot.value as? NSDictionary {
-                if let name = data[Constants.NAME] as? String {
-                    if name == self.employer {
-                        self.employer_id = snapshot.key
-                        print("The value is \(self.employer_id)")
-                    }
-                }
-            }
-        
-    }
-    
     func requestParttimr(latitude: Double, longitude: Double) {
         let data: Dictionary<String, Any> = [Constants.NAME: employer, Constants.LATITUDE: latitude, Constants.LONGTITUDE: longitude]
         
@@ -49,32 +28,5 @@ class HireHandler {
         
     } //request parttimr
     
-    func cancelParttimr() {
-        DBProvider.Instance.requestRef.child(employer_id).removeValue()
-    }
     
 } // class
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
