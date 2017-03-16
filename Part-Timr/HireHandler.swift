@@ -11,6 +11,7 @@ import FirebaseDatabase
 
 protocol ParttimrController: class {
     func canCallParttimr(delegateCalled: Bool)
+    func parttimrAcceptedRequest(requestAccepted: Bool, parttimrName: String)
 }
 
 class HireHandler {
@@ -53,6 +54,20 @@ class HireHandler {
                 }
             }
         }
+        
+        DBProvider.Instance.requestAcceptedRef.observe(FIRDataEventType.childAdded) { (Snapshot:FIRDataSnapshot) in
+            
+            if let data = Snapshot.value as? NSDictionary {
+                if let name = data[Constants.NAME] as? String {
+                    if self.employee == "" {
+                        self.employee = name;
+                        self.delegate?.parttimrAcceptedRequest(requestAccepted: true, parttimrName: self.employee)
+                    }
+                }
+            }
+            
+        }
+        
     }
     
     func requestParttimr(latitude: Double, longitude: Double) {

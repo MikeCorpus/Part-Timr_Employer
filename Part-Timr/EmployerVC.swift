@@ -66,6 +66,20 @@ class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
         }
     }
     
+    func parttimrAcceptedRequest(requestAccepted: Bool, parttimrName: String) {
+        
+        if !employerCanceledRequest {
+            if requestAccepted {
+                alertTheUser(title: "Part-Timr Accepted", message: "\(parttimrName) Accepted Your Request")
+            } else {
+                HireHandler.Instance.cancelParttimr()
+                alertTheUser(title: "Part-Timr Canceled", message: "\(parttimrName ) Canceled Your Request")
+            }
+        }
+        
+        
+    }
+    
     @IBAction func Hire(_ sender: Any) {
         if userLocation != nil {
             if canCallParttimr {
