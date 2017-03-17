@@ -12,6 +12,7 @@ import FirebaseDatabase
 protocol ParttimrController: class {
     func canCallParttimr(delegateCalled: Bool)
     func parttimrAcceptedRequest(requestAccepted: Bool, parttimrName: String)
+    func updateParttimrsLocation(lat: Double, long: Double)
 }
 
 class HireHandler {
@@ -55,6 +56,7 @@ class HireHandler {
             }
         }
         
+        // PARTTIMR ACCEPTED
         DBProvider.Instance.requestAcceptedRef.observe(FIRDataEventType.childAdded) { (Snapshot:FIRDataSnapshot) in
             
             if let data = Snapshot.value as? NSDictionary {
@@ -62,6 +64,37 @@ class HireHandler {
                     if self.employee == "" {
                         self.employee = name;
                         self.delegate?.parttimrAcceptedRequest(requestAccepted: true, parttimrName: self.employee)
+                    }
+                }
+            }
+            
+        }
+        
+        // PARTTIMR CANCELED
+        DBProvider.Instance.requestAcceptedRef.observe(FIRDataEventType.childRemoved) { (snapshot:FIRDataSnapshot) in
+            
+            if let data = snapshot.value as? NSDictionary {
+                if let name = data[Constants.NAME] as? String {
+                    if name == self.employee {
+                        self.employee = ""
+                        self.delegate?.parttimrAcceptedRequest(requestAccepted: false, parttimrName: name);
+                    }
+                }
+            }
+            
+        }
+        
+        // PARTTIMR UPDATING LOCATION
+        DBProvider.Instance.requestAcceptedRef.observe(FIRDataEventType.childChanged) { (snapshot: FIRDataSnapshot) in
+            
+            if let data = snapshot.value as? NSDictionary {
+                if let name = data[Constants.NAME] as? String {
+                    if name == self.employee {
+                        if let lat = data[Constants.LATITUDE] as? Double {
+                            if let long = data[Constants.LONGTITUDE] as? Double {
+                                self.delegate?.updateParttimrsLocation(lat: lat, long: long)
+                            }
+                        }
                     }
                 }
             }
@@ -79,6 +112,10 @@ class HireHandler {
     
     func cancelParttimr() {
         DBProvider.Instance.requestRef.child(employer_id).removeValue()
+    }
+    
+    func updateParttimrsLocation(lat: Double, long: Double) {
+        DBProvider.Instance.requestRef.child(employer_id).updateChildValues([Constants.LATITUDE: lat, Constants.LONGTITUDE: long]);
     }
     
     

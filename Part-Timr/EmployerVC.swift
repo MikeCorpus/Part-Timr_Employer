@@ -14,12 +14,17 @@ class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
     @IBOutlet weak var mapView: MKMapView!
     
     @IBOutlet weak var callParttimrBtn: UIButton!
+    
     private var locationManager = CLLocationManager()
     private var userLocation: CLLocationCoordinate2D?
-//    private var hirerLocation: CLLocationCoordinate2D?
+    private var parttimrLocation: CLLocationCoordinate2D?
+    
+    private var timer = Timer();
     
     private var canCallParttimr = true
     private var employerCanceledRequest = false
+    
+    private var appStartedForTheFirstTime = true;
     
     
     override func viewDidLoad() {
@@ -47,6 +52,17 @@ class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
             mapView.setRegion(region, animated: true)
             mapView.removeAnnotations(mapView.annotations)
             
+            
+            if  parttimrLocation != nil {
+                if !canCallParttimr {
+                    let parttimrAnnotation = MKPointAnnotation();
+                    parttimrAnnotation.coordinate = parttimrLocation!;
+                    parttimrAnnotation.title = "Driver Location";
+                    mapView.addAnnotation(parttimrAnnotation);
+                }
+            }
+
+            
             let annotation = MKPointAnnotation()
             annotation.coordinate = userLocation!
             annotation.title = "Hirer's Location"
@@ -54,6 +70,10 @@ class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
             
         }
         
+    }
+    
+    func updateHirerLocation() {
+        HireHandler.Instance.updateParttimrsLocation(lat: userLocation!.longitude, long: userLocation!.latitude)
     }
 
     func canCallParttimr(delegateCalled: Bool) {
@@ -77,16 +97,23 @@ class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
             }
         }
         
+        employerCanceledRequest = false;
         
     }
     
-    @IBAction func Hire(_ sender: Any) {
+    func updateParttimrsLocation(lat: Double, long: Double) {
+        parttimrLocation = CLLocationCoordinate2D(latitude: lat, longitude: long)
+    }
+    
+    @IBAction func Hire(_ sender: AnyObject ) {
         if userLocation != nil {
             if canCallParttimr {
                 HireHandler.Instance.requestParttimr(latitude: Double (userLocation!.latitude), longitude: Double (userLocation!.longitude))
+                    timer = Timer.scheduledTimer(timeInterval: TimeInterval(10), target: self, selector: #selector(EmployerVC.updateParttimrsLocation), userInfo: nil, repeats: true);
             } else {
                 employerCanceledRequest = true
                 HireHandler.Instance.cancelParttimr()
+                timer.invalidate()
             }
         }
     }
