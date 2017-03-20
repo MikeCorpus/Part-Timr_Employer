@@ -31,10 +31,11 @@ I used [SemVer](http://semver.org/) for versioning. For the versions available, 
 * Tabs - switch between tabs to find the most suitable job for Part-Timr (Recently posted jobs, Location, Interest, etc.)
 * Detailed profile for both Part-Timr and Hirer.
 * Star Rating 
+* Payment method
 
 ## Acknowledgments
 
 * God for providing me the wisdom to build this app.
-* Ray Wenderlich for the basic tutorials.
-* AppCoda for the basic tutorials.
+* Ray Wenderlich for the CoreData tutorials.
+* AppCoda for the Swift 3 tutorials.
 
