@@ -16,7 +16,7 @@ class Constants {
     static let EMAIL = "email"
     static let PASSWORD = "password"
     static let DATA = "data"
-    static let isEmployer = "isEmployer"
+    static let isHirer = "isHirer"
     static let PARTTIMR_REQUEST = "Parttimr_Request"
     static let PARTTIMR_ACCEPTED = "Parttimr_Accepted"
     
@@ -25,7 +25,7 @@ class Constants {
     
     static let NAME = "name"
     static let LATITUDE = "latitude"
-    static let LONGTITUDE = "longtitude"
+    static let LONGITUDE = "longitude"
     
     
 }

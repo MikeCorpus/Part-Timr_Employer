@@ -33,7 +33,7 @@ class SignInVC: UIViewController {
                     
                 } else {
                     
-                    HireHandler.Instance.employer = self.emailTextField.text!
+                    HireHandler.Instance.hirer = self.emailTextField.text!
                     
                     self.passwordTextField.text = ""; //clears the password field
                     

@@ -1,6 +1,6 @@
 //
 //  EmployerVC.swift
-//  Part-Timr for Employer
+//  Part-Timr for Hirer
 //
 //  Created by Michael V. Corpus on 11/02/2017.
 //  Copyright © 2017 Michael V. Corpus. All rights reserved.
@@ -22,7 +22,7 @@ class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
     private var timer = Timer();
     
     private var canCallParttimr = true
-    private var employerCanceledRequest = false
+    private var hirerCanceledRequest = false
     
     private var appStartedForTheFirstTime = true;
     
@@ -30,7 +30,7 @@ class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeLocationManager()
-        HireHandler.Instance.observeMessagesForEmployer()
+        HireHandler.Instance.observeMessagesForHirer()
         HireHandler.Instance.delegate = self
     }
     
@@ -88,7 +88,7 @@ class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
     
     func parttimrAcceptedRequest(requestAccepted: Bool, parttimrName: String) {
         
-        if !employerCanceledRequest {
+        if !hirerCanceledRequest {
             if requestAccepted {
                 alertTheUser(title: "Part-Timr Accepted", message: "\(parttimrName) Accepted Your Request")
             } else {
@@ -97,7 +97,7 @@ class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
             }
         }
         
-        employerCanceledRequest = false;
+        hirerCanceledRequest = false;
         
     }
     
@@ -111,7 +111,7 @@ class EmployerVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
                 HireHandler.Instance.requestParttimr(latitude: Double (userLocation!.latitude), longitude: Double (userLocation!.longitude))
                     timer = Timer.scheduledTimer(timeInterval: TimeInterval(10), target: self, selector: #selector(EmployerVC.updateParttimrsLocation), userInfo: nil, repeats: true);
             } else {
-                employerCanceledRequest = true
+                hirerCanceledRequest = true
                 HireHandler.Instance.cancelParttimr()
                 timer.invalidate()
             }

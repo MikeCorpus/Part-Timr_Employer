@@ -1,6 +1,6 @@
 //
 //  HireHandler.swift
-//  Part-Timr for Employer
+//  Part-Timr for hirer
 //
 //  Created by Michael V. Corpus on 28/02/2017.
 //  Copyright © 2017 Michael V. Corpus. All rights reserved.
@@ -21,22 +21,22 @@ class HireHandler {
     
     weak var delegate: ParttimrController?
     
-    var employer = ""
-    var employee = ""
-    var employer_id = ""
+    var hirer = ""
+    var parttimr = ""
+    var hirer_id = ""
     
     static var Instance: HireHandler {
         return _instance
     }
     
-    func observeMessagesForEmployer() {
+    func observeMessagesForHirer() {
         DBProvider.Instance.requestRef.observe(FIRDataEventType.childAdded) { (snapshot: FIRDataSnapshot) in
             
             if let data = snapshot.value as? NSDictionary {
                 if let name = data[Constants.NAME] as? String {
-                    if name == self.employer {
-                        self.employer_id = snapshot.key
-                        print("The value is \(self.employer_id)")
+                    if name == self.hirer {
+                        self.hirer_id = snapshot.key
+                        print("The value is \(self.hirer_id)")
                         self.delegate?.canCallParttimr(delegateCalled: true)
                     }
                 }
@@ -49,7 +49,7 @@ class HireHandler {
             
             if let data = snapshot.value as? NSDictionary {
                 if let name = data[Constants.NAME] as? String {
-                    if name == self.employer {
+                    if name == self.hirer {
                         self.delegate?.canCallParttimr(delegateCalled: false)
                     }
                 }
@@ -61,9 +61,9 @@ class HireHandler {
             
             if let data = Snapshot.value as? NSDictionary {
                 if let name = data[Constants.NAME] as? String {
-                    if self.employee == "" {
-                        self.employee = name;
-                        self.delegate?.parttimrAcceptedRequest(requestAccepted: true, parttimrName: self.employee)
+                    if self.parttimr == "" {
+                        self.parttimr = name;
+                        self.delegate?.parttimrAcceptedRequest(requestAccepted: true, parttimrName: self.parttimr)
                     }
                 }
             }
@@ -75,8 +75,8 @@ class HireHandler {
             
             if let data = snapshot.value as? NSDictionary {
                 if let name = data[Constants.NAME] as? String {
-                    if name == self.employee {
-                        self.employee = ""
+                    if name == self.parttimr {
+                        self.parttimr = ""
                         self.delegate?.parttimrAcceptedRequest(requestAccepted: false, parttimrName: name);
                     }
                 }
@@ -89,9 +89,9 @@ class HireHandler {
             
             if let data = snapshot.value as? NSDictionary {
                 if let name = data[Constants.NAME] as? String {
-                    if name == self.employee {
+                    if name == self.parttimr {
                         if let lat = data[Constants.LATITUDE] as? Double {
-                            if let long = data[Constants.LONGTITUDE] as? Double {
+                            if let long = data[Constants.LONGITUDE] as? Double {
                                 self.delegate?.updateParttimrsLocation(lat: lat, long: long)
                             }
                         }
@@ -104,18 +104,18 @@ class HireHandler {
     }
     
     func requestParttimr(latitude: Double, longitude: Double) {
-        let data: Dictionary<String, Any> = [Constants.NAME: employer, Constants.LATITUDE: latitude, Constants.LONGTITUDE: longitude]
+        let data: Dictionary<String, Any> = [Constants.NAME: hirer, Constants.LATITUDE: latitude, Constants.LONGITUDE: longitude]
         
             DBProvider.Instance.requestRef.childByAutoId().setValue(data)
         
     } //request parttimr
     
     func cancelParttimr() {
-        DBProvider.Instance.requestRef.child(employer_id).removeValue()
+        DBProvider.Instance.requestRef.child(hirer_id).removeValue()
     }
     
     func updateParttimrsLocation(lat: Double, long: Double) {
-        DBProvider.Instance.requestRef.child(employer_id).updateChildValues([Constants.LATITUDE: lat, Constants.LONGTITUDE: long]);
+        DBProvider.Instance.requestRef.child(hirer_id).updateChildValues([Constants.LATITUDE: lat, Constants.LONGITUDE: long]);
     }
     
     
