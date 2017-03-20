@@ -4,6 +4,10 @@ GrabTaxi and Upwork cross-over iPhone app for freelancing. Part-Timr App is basi
 
 Part-Timr App makes use of the idle resources in colleges such as knowledge and freelancing skills and connects Part-Timrs (students) based on their needs and their ability to help a client (Hirer).
 
+## Two separate apps
+
+* App for [Hirer](https://github.com/MikeCorpus/Part-Timr_Employer).
+* App for [Part-Timr](https://github.com/MikeCorpus/Part-Timr_Employee).
 
 
 ## Built With
