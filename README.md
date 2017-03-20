@@ -1,27 +1,40 @@
-# Part-Timr App
+![Part-Timr App](https://mikeroscoop.files.wordpress.com/2017/03/part-timr-logo.png)
 
-GrabTaxi and Upwork crossover iPhone app designed for college students.  
+GrabTaxi and Upwork cross-over iPhone app for freelancing. Part-Timr App is basically a GrabTaxi app, but instead of a driver and a rider, we have a Part-Timr and a Hirer. 
 
-## Getting Started
+Part-Timr App makes use of the idle resources in colleges such as knowledge and freelancing skills and connects Part-Timrs (students) based on their needs and their ability to help a client (Hirer).
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 
 ## Built With
-* [Swift 3](https://developer.apple.com/swift/) - The programming language.
-* [Firebase](http://firebase.google.com/) - Database 
+
 * [Xcode 8](https://developer.apple.com/xcode/) - Most of the work was done here.
-* [Sketch](https://www.sketchapp.com/) - UI Design
+* [Swift 3](https://developer.apple.com/swift/) - The programming language.
+* [Firebase](http://firebase.google.com/) - Database.
+* [Sketch](https://www.sketchapp.com/) - UI Design.
 
 
 ## Versioning
 
 I used [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/MikeCorpus/Part-Timr_Employer/tags). 
 
+## On-going refining
+
+* UI improvements
+* Login with Facebook, Google+, etc.
+* Auto-Login
+* Improve segue 
+
+## Major modifications to add
+
+* Chat feature - to ease communication between the Hirer and the Part-timr.
+* Tabs - switch between tabs to find the most suitable job for Part-Timr (Recently posted jobs, Location, Interest, etc.)
+* Detailed profile for both Part-Timr and Hirer.
+* Rating for 
 
 ## Acknowledgments
 
-* God for providing me the wisdom to build this app
+* God for providing me the wisdom to build this app.
 * Ray Wenderlich for the basic tutorials.
 * AppCoda for the basic tutorials.
 
