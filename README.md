@@ -26,16 +26,17 @@ I used [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 * UI improvements
 * Login with Facebook, Google+, etc.
-* Auto-Login
-* Improve segue 
+* Auto-Login.
+* Improve segue. 
 
 ## Major modifications to add
 
 * Chat feature - to ease communication between the Hirer and the Part-timr.
 * Tabs - switch between tabs to find the most suitable job for Part-Timr (Recently posted jobs, Location, Interest, etc.)
 * Detailed profile for both Part-Timr and Hirer.
-* Star Rating 
-* Payment method
+* Star rating system.
+* Payment methods.
+* A better logo.
 
 ## Acknowledgments
 
