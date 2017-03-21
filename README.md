@@ -1,4 +1,4 @@
-![Part-Timr App](https://mikeroscoop.files.wordpress.com/2017/03/parttimr-promo.png)
+![Part-Timr App](https://mikeroscoop.files.wordpress.com/2017/03/parttimr-promo-small.png)
 
 GrabTaxi and Upwork cross-over iPhone app for freelancing. Part-Timr App is basically a GrabTaxi app, but instead of a driver and a rider, we have a Part-Timr and a Hirer. 
 
